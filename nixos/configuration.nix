@@ -6,7 +6,6 @@
     ./modules/locale.nix
     ./modules/users.nix
     ./modules/hardware.nix
-    ./modules/packages.nix
     ./modules/programs.nix
     ./modules/nix.nix
   ];
