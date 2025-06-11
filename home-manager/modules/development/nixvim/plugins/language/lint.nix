@@ -13,12 +13,13 @@ in {
     enable = true;
     lintersByFt =
       lib.mapAttrs
-      (specific: common ++ specific)
+      (_: specific: common ++ specific)
       linters;
   };
 
   extraPackages = with pkgs; [
     statix
+    deadnix
     codespell
   ];
 }

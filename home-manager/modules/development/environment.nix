@@ -59,6 +59,10 @@
           path = "fg=magenta";
         };
       };
+      shellAliases = {
+        rbos = "sudo nixos-rebuild switch --flake .#thinkpad";
+        rbh = "home-manager switch --flake .#louis";
+      };
     };
 
     starship = {
@@ -81,6 +85,7 @@
     direnv = {
       enable = true;
       enableZshIntegration = true;
+      nix-direnv.enable = true;
     };
 
     yazi = {
@@ -98,6 +103,7 @@
     devenv
     btop
     bat
+    pre-commit
 
     # TODO: Look at each of the below.
     # ripgrep

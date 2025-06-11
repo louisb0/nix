@@ -17,11 +17,9 @@
       enable = true;
       gotoNextStart = {
         "]f" = "@function.outer";
-        "]c" = "@class.outer";
       };
       gotoPreviousStart = {
         "[f" = "@function.outer";
-        "[c" = "@class.outer";
       };
     };
   };
