@@ -168,12 +168,14 @@
         }
       ];
 
+      # TODO: This shouldn't live in desktop.nix
       startup = let
         tmuxStartupScript = pkgs.writeShellScript "tmux-startup" ''
           ${pkgs.tmux}/bin/tmux new-session -d -s nix -c ~/ws/nix \; send-keys "nvim" Enter
           ${pkgs.tmux}/bin/tmux new-window -t nix -c ~/ws/nix
           ${pkgs.tmux}/bin/tmux new-session -d -s school -c ~/ws/archive/school
-          ${pkgs.tmux}/bin/tmux attach -t nix
+          ${pkgs.tmux}/bin/tmux new-session -d -s general -c ~/ws
+          ${pkgs.tmux}/bin/tmux attach -t general
         '';
       in [
         {
