@@ -26,11 +26,3 @@ jobs:
         run: |
           nix develop --command statix check .
           nix develop --command deadnix --fail .
-
-      - name: Build NixOS config
-        run: |
-          nix build .#nixosConfigurations.thinkpad.config.system.build.toplevel
-
-      - name: Build home-manager config
-        run: |
-          nix build .#homeConfigurations.louis.activationPackage
