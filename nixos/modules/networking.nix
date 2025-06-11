@@ -1,6 +1,6 @@
 {
   networking = {
-    hostName = "louis-thinkpad";
+    hostName = "thinkpad";
     networkmanager.enable = true;
     extraHosts = ''
       127.0.0.1 reddit.com

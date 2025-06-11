@@ -1,0 +1,198 @@
+/**
+ * Rofi Theme - Rosé Pine
+ **/
+
+* {
+    rose-pine-base: rgba(25, 23, 36, 100%);
+    rose-pine-surface: rgba(31, 29, 46, 100%);
+    rose-pine-overlay: rgba(38, 35, 58, 100%);
+    rose-pine-muted: rgba(110, 106, 134, 100%);
+    rose-pine-subtle: rgba(144, 140, 170, 100%);
+    rose-pine-text: rgba(224, 222, 244, 100%);
+    rose-pine-love: rgba(235, 111, 146, 100%);
+    rose-pine-gold: rgba(246, 193, 119, 100%);
+    rose-pine-rose: rgba(234, 154, 151, 100%);
+    rose-pine-pine: rgba(49, 116, 143, 100%);
+    rose-pine-foam: rgba(156, 207, 216, 100%);
+    rose-pine-iris: rgba(196, 167, 231, 100%);
+
+    normal-background: var(rose-pine-base);
+    active-background: var(rose-pine-base);
+    urgent-background: var(rose-pine-base);
+    selected-normal-background: var(rose-pine-subtle);
+    selected-active-background: var(rose-pine-foam);
+    selected-urgent-background: var(rose-pine-love);
+    alternate-normal-background: var(rose-pine-surface);
+    alternate-active-background: var(rose-pine-surface);
+    alternate-urgent-background: var(rose-pine-surface);
+
+    normal-foreground: var(rose-pine-text);
+    active-foreground: var(rose-pine-foam);
+    urgent-foreground: var(rose-pine-love);
+    selected-normal-foreground: var(rose-pine-base);
+    selected-active-foreground: var(rose-pine-base);
+    selected-urgent-foreground: var(rose-pine-base);
+    alternate-normal-foreground: var(rose-pine-text);
+    alternate-active-foreground: var(rose-pine-foam);
+    alternate-urgent-foreground: var(rose-pine-love);
+
+    background-color: rgba(0, 0, 0, 0%);
+    border-color: var(rose-pine-text);
+    separatorcolor: var(rose-pine-text);
+    spacing: 2;
+}
+
+window {
+    padding: 5;
+    background-color: var(rose-pine-base);
+    border: 1;
+}
+
+mainbox {
+    padding: 0;
+    border: 0;
+}
+
+inputbar {
+    padding: 1px;
+    spacing: 0px;
+    text-color: var(normal-foreground);
+    children: [prompt, textbox-prompt-colon, entry, overlay, num-filtered-rows, textbox-num-sep, num-rows, case-indicator];
+}
+
+entry {
+    spacing: 0;
+    text-color: var(normal-foreground);
+    placeholder-color: var(rose-pine-subtle);
+    placeholder: "Type to filter";
+    cursor: text;
+}
+
+prompt, textbox-prompt-colon {
+    enabled: false;
+}
+
+overlay {
+    background-color: var(normal-foreground);
+    foreground-color: var(normal-background);
+    text-color: var(normal-background);
+    padding: 0 0.2em;
+    margin: 0 0.2em;
+}
+
+case-indicator {
+    spacing: 0;
+    text-color: var(normal-foreground);
+}
+
+num-filtered-rows, num-rows {
+    text-color: var(rose-pine-subtle);
+    expand: false;
+}
+
+textbox-num-sep {
+    text-color: var(rose-pine-subtle);
+    expand: false;
+    str: "/";
+}
+
+listview {
+    padding: 2px 0px 0px;
+    scrollbar: false;
+    border-color: var(separatorcolor);
+    spacing: 2px;
+    fixed-height: 0;
+    border: 2px dash 0px 0px;
+}
+
+element {
+    padding: 1px;
+    spacing: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: var(normal-background);
+    text-color: var(normal-foreground);
+}
+
+element normal.urgent {
+    background-color: var(urgent-background);
+    text-color: var(urgent-foreground);
+}
+
+element normal.active {
+    background-color: var(active-background);
+    text-color: var(active-foreground);
+}
+
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color: var(selected-normal-foreground);
+}
+
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color: var(selected-urgent-foreground);
+}
+
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color: var(selected-active-foreground);
+}
+
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color: var(alternate-normal-foreground);
+}
+
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color: var(alternate-urgent-foreground);
+}
+
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color: var(alternate-active-foreground);
+}
+
+element-text {
+    background-color: rgba(0, 0, 0, 0%);
+    text-color: inherit;
+    highlight: inherit;
+    cursor: inherit;
+}
+
+element-icon {
+    background-color: rgba(0, 0, 0, 0%);
+    size: 1.0000em;
+    text-color: inherit;
+    cursor: inherit;
+}
+
+message {
+    padding: 1px;
+    border-color: var(separatorcolor);
+    border: 2px dash 0px 0px;
+}
+
+textbox {
+    text-color: var(rose-pine-text);
+}
+
+sidebar {
+    border-color: var(separatorcolor);
+    border: 2px dash 0px 0px;
+}
+
+button {
+    spacing: 0;
+    text-color: var(normal-foreground);
+    cursor: pointer;
+}
+
+button selected {
+    background-color: var(selected-normal-background);
+    text-color: var(selected-normal-foreground);
+}

@@ -29,4 +29,4 @@ jobs:
 
       - name: Build NixOS config
         run: |
-          nix build .#nixosConfigurations.laptop.config.system.build.toplevel
+          nix build .#nixosConfigurations.thinkpad.config.system.build.toplevel

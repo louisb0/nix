@@ -8,9 +8,13 @@
     ./modules/hardware.nix
     ./modules/programs.nix
     ./modules/nix.nix
+    ./modules/system-fonts.nix
   ];
 
+  # TODO: Revisit NixOS / home-manager split.
   environment.systemPackages = with pkgs; [
+    home-manager
+
     file
     which
     psmisc
