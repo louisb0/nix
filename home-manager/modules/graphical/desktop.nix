@@ -246,11 +246,10 @@
       };
 
       keybindings = lib.mkOptionDefault {
+        "F7" = "exec sh -c 'if bluetoothctl info 04:FE:A1:61:79:E4 | grep -q \"Connected: yes\"; then bluetoothctl disconnect 04:FE:A1:61:79:E4; else bluetoothctl connect 04:FE:A1:61:79:E4; fi'";
         "F4" = "exec grim -g \"$(slurp)\" - | wl-copy";
-        "Shift+F4" = "exec grim -g \"$(slurp)\" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png";
         "${modifier}+r" = "exec touch /tmp/sway-resize && sleep 0.1 && pkill -RTMIN+8 waybar; mode resize";
         "${modifier}+d" = "exec rofi -show drun";
-
         "${modifier}+s" = null;
         "${modifier}+w" = null;
       };
