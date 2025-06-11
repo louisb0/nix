@@ -104,6 +104,7 @@
     btop
     bat
     pre-commit
+    neofetch
 
     # TODO: Look at each of the below.
     # ripgrep
