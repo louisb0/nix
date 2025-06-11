@@ -185,6 +185,10 @@
         {
           command = "1password";
         }
+        {
+          command = "systemctl restart --user kanshi";
+          always = true;
+        }
       ];
 
       assigns = {
