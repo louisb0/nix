@@ -1,10 +1,13 @@
-{inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
     ./modules/theme.nix
-
-    ./modules/applications.nix
+    ./modules/recording.nix
 
     ./modules/graphical/desktop.nix
     ./modules/graphical/kanshi.nix
@@ -22,6 +25,27 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
+
+    packages = with pkgs; [
+      mpv
+      brave
+      anki
+
+      # TODO: Temporary.
+      pandoc
+      texlive.combined.scheme-medium
+      (rstudioWrapper.override {
+        packages = with rPackages; [
+          rmarkdown
+          urca
+          knitr
+          tidyverse
+          fpp3
+          kableExtra
+          bookdown
+        ];
+      })
+    ];
 
     stateVersion = "25.05";
   };
