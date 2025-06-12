@@ -10,6 +10,9 @@
       enable = true;
       prefix = "C-a";
       terminal = "screen-256color";
+      baseIndex = 1;
+      keyMode = "vi";
+
       plugins = with pkgs.tmuxPlugins; [
         {
           plugin = rose-pine;
@@ -19,22 +22,19 @@
           '';
         }
       ];
-      extraConfig = ''
-        set -g base-index 1
-        setw -g pane-base-index 1
 
+      extraConfig = ''
         bind c new-window -c "#{pane_current_path}"
         bind '"' split-window -c "#{pane_current_path}"
         bind % split-window -h -c "#{pane_current_path}"
 
-        setw -g mode-keys vi
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
         bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
 
         bind-key ! switch-client -t general
         bind-key @ switch-client -t school
-        bind-key # switch-client -t nix
+        bind-key "#" switch-client -t nix
 
         bind r source-file ~/.config/tmux/tmux.conf \; display-message "Reloaded!"
       '';

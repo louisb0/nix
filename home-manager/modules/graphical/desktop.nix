@@ -171,10 +171,14 @@
       # TODO: This shouldn't live in desktop.nix
       startup = let
         tmuxStartupScript = pkgs.writeShellScript "tmux-startup" ''
-          ${pkgs.tmux}/bin/tmux new-session -d -s nix -c ~/ws/nix \; send-keys "nvim" Enter
-          ${pkgs.tmux}/bin/tmux new-window -t nix -c ~/ws/nix
-          ${pkgs.tmux}/bin/tmux new-session -d -s school -c ~/ws/archive/school
           ${pkgs.tmux}/bin/tmux new-session -d -s general -c ~/ws
+          ${pkgs.tmux}/bin/tmux new-session -d -s projects -c ~/ws/projects
+          ${pkgs.tmux}/bin/tmux new-session -d -s school -c ~/ws/archive/school
+          ${pkgs.tmux}/bin/tmux new-session -d -s nix -c ~/ws/nix
+
+          ${pkgs.tmux}/bin/tmux send-keys -t nix "nvim" Enter
+          ${pkgs.tmux}/bin/tmux new-window -t nix -c ~/ws/nix
+
           ${pkgs.tmux}/bin/tmux attach -t general
         '';
       in [
@@ -185,7 +189,7 @@
           command = "swaymsg 'workspace 2; exec ${pkgs.kitty}/bin/kitty -e ${tmuxStartupScript}'";
         }
         {
-          command = "1password";
+          command = "swaymsg 'workspace 10; exec 1password'";
         }
         {
           command = "systemctl restart --user kanshi";
@@ -195,7 +199,7 @@
 
       assigns = {
         "1" = [{class = "Brave-browser";}];
-        "10" = [{class = "1Password";}];
+        "4" = [{app_id = "com.obsproject.Studio";}];
       };
 
       workspaceAutoBackAndForth = true;
