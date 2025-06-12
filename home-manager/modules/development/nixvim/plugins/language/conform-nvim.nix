@@ -5,6 +5,7 @@
       formatters_by_ft = {
         nix = ["alejandra"];
         python = ["black"];
+        markdown = ["dprint"];
 
         _ = ["trim_whitespace"];
       };
@@ -15,5 +16,5 @@
     };
   };
 
-  extraPackages = with pkgs; [alejandra black];
+  extraPackages = with pkgs; [alejandra black dprint];
 }
