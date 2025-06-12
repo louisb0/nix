@@ -32,9 +32,10 @@
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
         bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
 
-        bind-key ! switch-client -t general
+        bind-key ! switch-client -t project
         bind-key @ switch-client -t school
         bind-key "#" switch-client -t nix
+        bind-key $ switch-client -t general
 
         bind r source-file ~/.config/tmux/tmux.conf \; display-message "Reloaded!"
       '';
