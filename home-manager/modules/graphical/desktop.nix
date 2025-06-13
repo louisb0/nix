@@ -173,7 +173,6 @@
         tmuxStartupScript = pkgs.writeShellScript "tmux-startup" ''
           ${pkgs.tmux}/bin/tmux new-session -d -s general -c ~/ws
           ${pkgs.tmux}/bin/tmux new-session -d -s projects -c ~/ws/projects
-          ${pkgs.tmux}/bin/tmux new-session -d -s school -c ~/ws/archive/school
           ${pkgs.tmux}/bin/tmux new-session -d -s nix -c ~/ws/nix
 
           ${pkgs.tmux}/bin/tmux send-keys -t nix "nvim" Enter
