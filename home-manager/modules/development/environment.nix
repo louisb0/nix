@@ -62,6 +62,7 @@
         };
       };
       shellAliases = {
+        # TODO: Should be project specific aliases.
         rbos = "sudo nixos-rebuild switch --flake .#thinkpad";
         rbh = "home-manager switch --flake .#louis";
       };

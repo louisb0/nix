@@ -15,7 +15,6 @@
       ./plugins/language/lint.nix
 
       ./plugins/editor/oil.nix
-      ./plugins/editor/sleuth.nix
       ./plugins/editor/comment.nix
       ./plugins/editor/nvim-autopairs.nix
       ./plugins/editor/gitsigns.nix
