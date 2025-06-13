@@ -72,15 +72,17 @@
       enableZshIntegration = true;
       settings = {
         c = {
-          symbol = " ";
-          format = "\\[[$symbol($version(-$name))]($style)\\]";
+          symbol = " ";
+          format = "\\[[$symbol($version(-$name))]($style)\\] ";
           detect_extensions = ["cpp" "hpp"];
           detect_files = ["CMakeLists.txt" "Makefile"];
         };
         nix_shell = {
           symbol = "󱄅 ";
-          format = "\\[[$symbol$state( \\($name\\))]($style)\\]";
+          format = "\\[[$symbol$state( \\($name\\))]($style)\\] ";
         };
+
+        cmake.disabled = true;
       };
     };
 
