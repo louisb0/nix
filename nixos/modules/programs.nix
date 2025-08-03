@@ -1,9 +1,13 @@
-{
+{pkgs, ...}: {
   security.polkit.enable = true;
 
   programs = {
     steam.enable = true;
     gnupg.agent.enable = true;
+    wireshark = {
+      enable = true;
+      package = pkgs.wireshark;
+    };
 
     _1password-gui = {
       enable = true;

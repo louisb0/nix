@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   users.users.louis = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "wireshark"];
     shell = pkgs.zsh;
   };
 

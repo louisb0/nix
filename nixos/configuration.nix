@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./modules/nix.nix
     ./hardware-configuration.nix
     ./modules/boot.nix
     ./modules/networking.nix
@@ -7,7 +8,6 @@
     ./modules/users.nix
     ./modules/hardware.nix
     ./modules/programs.nix
-    ./modules/nix.nix
     ./modules/system-fonts.nix
   ];
 
@@ -39,6 +39,9 @@
     pciutils
     ncdu
     tcpdump
+
+    man-pages
+    man-pages-posix
   ];
 
   system.stateVersion = "25.05";
