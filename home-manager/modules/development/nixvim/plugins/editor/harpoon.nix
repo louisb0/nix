@@ -58,5 +58,59 @@
         silent = true;
       };
     }
+    {
+      mode = "n";
+      key = "<leader>5";
+      action = "<cmd>lua require('harpoon'):list():select(5)<cr>";
+      options = {
+        desc = "Harpoon file [5]";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>6";
+      action = "<cmd>lua require('harpoon'):list():select(6)<cr>";
+      options = {
+        desc = "Harpoon file [6]";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>7";
+      action = "<cmd>lua require('harpoon'):list():select(7)<cr>";
+      options = {
+        desc = "Harpoon file [7]";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>8";
+      action = "<cmd>lua require('harpoon'):list():select(8)<cr>";
+      options = {
+        desc = "Harpoon file [8]";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>9";
+      action = "<cmd>lua require('harpoon'):list():select(9)<cr>";
+      options = {
+        desc = "Harpoon file [9]";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>0";
+      action = "<cmd>lua require('harpoon'):list():select(10)<cr>";
+      options = {
+        desc = "Harpoon file [10]";
+        silent = true;
+      };
+    }
   ];
 }

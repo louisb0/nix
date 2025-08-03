@@ -6,7 +6,7 @@
     };
     font = {
       inherit (config.theme.font) name;
-      size = 12;
+      size = 13;
     };
     themeFile = "rose-pine-moon";
   };
