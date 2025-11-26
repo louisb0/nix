@@ -3,6 +3,8 @@
   inputs,
   ...
 }: {
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
@@ -26,9 +28,25 @@
     };
 
     packages = with pkgs; [
+      brightnessctl
       mpv
       brave
       anki
+      spotify
+      (rstudioWrapper.override {
+        packages = with rPackages; [
+          tidyverse
+          ggplot2
+          dplyr
+          tidyr
+          purrr
+          tibble
+          lubridate
+          knitr
+          rmarkdown
+          interactions
+        ];
+      })
     ];
 
     stateVersion = "25.05";

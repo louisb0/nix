@@ -29,6 +29,22 @@
           ];
         };
       }
+      {
+        profile = {
+          name = "docked2";
+          outputs = [
+            {
+              criteria = "eDP-1";
+              status = "disable";
+            }
+            {
+              criteria = "DP-2";
+              status = "enable";
+              mode = "1920x1080@60Hz";
+            }
+          ];
+        };
+      }
     ];
   };
 }

@@ -8,7 +8,6 @@
       ./colorscheme.nix
 
       ./plugins/language/treesitter.nix
-      ./plugins/language/treesitter-textobjects.nix
       ./plugins/language/lsp.nix
       ./plugins/language/cmp.nix
       ./plugins/language/conform-nvim.nix

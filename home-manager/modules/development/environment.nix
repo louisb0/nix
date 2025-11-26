@@ -101,6 +101,8 @@
       enable = true;
       enableZshIntegration = true;
     };
+
+    vscode.enable = true;
   };
 
   home.packages = with pkgs; [

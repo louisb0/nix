@@ -5,6 +5,7 @@
       clangd = {enable = true;};
       nil_ls = {enable = true;};
       pylsp = {enable = true;};
+      lua_ls = {enable = true;};
     };
 
     onAttach = ''
