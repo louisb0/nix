@@ -47,7 +47,7 @@
       '';
       oh-my-zsh = {
         enable = true;
-        plugins = ["git" "z" "sudo"];
+        plugins = ["git" "z" "sudo" "colored-man-pages"];
         extraConfig = ''
           export FZF_BASE="${pkgs.fzf}/share/fzf"
         '';
