@@ -1,4 +1,4 @@
 # nix
-My NixOS and home-manager configurations.
+My NixOS and home-manager configuration.
 
-![shell](./images/shell.png)
+![shell](./docs/shell.png)
